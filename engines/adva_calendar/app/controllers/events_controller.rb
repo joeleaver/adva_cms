@@ -20,6 +20,9 @@ class EventsController < BaseController
     @events = CalendarEvent.find_published_by_params(search_params).paginate(:page => params[:page])
 
     respond_to do |format|
+      format.html do
+      
+      end
       format.js do
         render :update do |page|
           page.select('.calendar_cell .calendar').each do |calendar|
@@ -27,8 +30,9 @@ class EventsController < BaseController
           end
         end
       end
-      format.html
-      format.ics
+      format.ics do
+      
+      end
     end
   end
 

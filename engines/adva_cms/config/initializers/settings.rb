@@ -24,3 +24,5 @@ Adva::Config.number_of_outgoing_mails_per_process = 150
 # turn this on to get detailed cache sweeper logging in production mode
 # Site.cache_sweeper_logging = true
 
+Fckeditor.load!
+
